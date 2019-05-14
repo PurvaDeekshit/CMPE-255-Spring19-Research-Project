@@ -40,7 +40,6 @@ To measure the error in generated image, a cross-entropy function is used, given
 G and D simultaneously tries to minimize and maximize the error fucntion:
 
 minmax V(D, G) = xy, where G tries to minimize the difference between generated and real image and D tries to maximize it.
- B  A
 
 GANs also support a feature called Style Mixing. We can select the features which we want to be definitely present in the image and which we want to eliminate from the image. The coarse features covering high level aspects such as age, hair style and glasses are prominently retained. Middle scale features, such as eye color and other facial features are changed with a little variation and fine features just change small details such as hair style, skin complexion etc. Currently GANs are learning to retain tiny features as well.
 
@@ -52,9 +51,3 @@ The second stage GAN downsamples this image and using the text description as in
 The training dataset includes images of flowers with their correct text description. Then input for generating a new image is a sentence of words. The model is then conditioned on text features encoded by a hybrid character-level convolutional recurrent neural network. And the final image is produced.
 
 This is how GANs are trained and used to generate images on their own. The discriminator concept can be applied to existing deep learning applications also. We can add a layer of discriminator into existing deep learning network to provide feedback and improve accuracy.
-
-Why	GANs are important:
-
-• Generation of images (Sampling) is straightforward.
-• Robust to Overfitting	since Generator	never sees the training	data.
-• Experiments show that GANs learn statistical data better than any other model.
